@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=3 uid="uid://d3o3fqwd6tpcp"]
 
-[ext_resource type="Texture2D" uid="uid://kgv1ti3s2eys" path="res://walk and idle.png" id="1_nlv7v"]
+[ext_resource type="Texture2D" uid="uid://kgv1ti3s2eys" path="res://sprites/walk and idle.png" id="1_nlv7v"]
 [ext_resource type="Script" path="res://scripts/fazendeira.gd" id="1_ryvtr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gkt0d"]

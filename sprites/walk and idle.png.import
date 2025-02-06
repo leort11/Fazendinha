@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvq0abhifcilv"
-path="res://.godot/imported/Crop_Spritesheet.png-96458d446019a1ddac999950eeff8dff.ctex"
+uid="uid://kgv1ti3s2eys"
+path="res://.godot/imported/walk and idle.png-3fe8a300dab74d40aa652144a90ad495.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Crop_Spritesheet.png"
-dest_files=["res://.godot/imported/Crop_Spritesheet.png-96458d446019a1ddac999950eeff8dff.ctex"]
+source_file="res://sprites/walk and idle.png"
+dest_files=["res://.godot/imported/walk and idle.png-3fe8a300dab74d40aa652144a90ad495.ctex"]
 
 [params]
 

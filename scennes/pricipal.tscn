@@ -1,0 +1,202 @@
+[gd_scene load_steps=24 format=3 uid="uid://bufgqdbet1oi2"]
+
+[ext_resource type="PackedScene" uid="uid://cjfyo4e302eou" path="res://scennes/cenario_grama.tscn" id="1_s7xjo"]
+[ext_resource type="PackedScene" uid="uid://d3o3fqwd6tpcp" path="res://scennes/fazendeira.tscn" id="2_7m4xq"]
+[ext_resource type="Texture2D" uid="uid://dvq0abhifcilv" path="res://sprites/Crop_Spritesheet.png" id="3_ai8u6"]
+[ext_resource type="Script" path="res://scripts/tomate.gd" id="3_pem78"]
+[ext_resource type="Texture2D" uid="uid://6q5884r51twk" path="res://sprites/summer tilemap.png" id="5_nhcju"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qnfs"]
+atlas = ExtResource("3_ai8u6")
+region = Rect2(80, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wmci"]
+atlas = ExtResource("3_ai8u6")
+region = Rect2(64, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86ygx"]
+atlas = ExtResource("3_ai8u6")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgc1a"]
+atlas = ExtResource("3_ai8u6")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5abi"]
+atlas = ExtResource("3_ai8u6")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ccg3"]
+atlas = ExtResource("3_ai8u6")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fnbn8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qnfs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7wmci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86ygx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgc1a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5abi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ccg3")
+}],
+"loop": false,
+"name": &"tomate",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lg2qq"]
+size = Vector2(14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_137gu"]
+atlas = ExtResource("5_nhcju")
+region = Rect2(128, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8k66"]
+atlas = ExtResource("5_nhcju")
+region = Rect2(128, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2yq56"]
+atlas = ExtResource("5_nhcju")
+region = Rect2(128, 144, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vf7v5"]
+atlas = ExtResource("5_nhcju")
+region = Rect2(128, 160, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_frlku"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_137gu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8k66")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yq56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vf7v5")
+}],
+"loop": true,
+"name": &"agua",
+"speed": 3.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rry55"]
+atlas = ExtResource("5_nhcju")
+region = Rect2(144, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dpn8"]
+atlas = ExtResource("5_nhcju")
+region = Rect2(144, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lw4bk"]
+atlas = ExtResource("5_nhcju")
+region = Rect2(144, 144, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3dr7p"]
+atlas = ExtResource("5_nhcju")
+region = Rect2(144, 160, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w76bo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rry55")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dpn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lw4bk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3dr7p")
+}],
+"loop": true,
+"name": &"agua",
+"speed": 4.0
+}]
+
+[node name="principal" type="Node2D"]
+
+[node name="cenario_grama" parent="." instance=ExtResource("1_s7xjo")]
+
+[node name="fazendeira" parent="cenario_grama" instance=ExtResource("2_7m4xq")]
+z_index = 1
+position = Vector2(565, 165)
+
+[node name="AnimatedSprite2D" parent="cenario_grama/fazendeira" index="0"]
+animation = &"andando_frente"
+frame_progress = 0.0
+
+[node name="Camera2D" type="Camera2D" parent="cenario_grama/fazendeira"]
+position = Vector2(0, 7)
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+
+[node name="tomate" type="Area2D" parent="."]
+position = Vector2(512, 169)
+monitorable = false
+script = ExtResource("3_pem78")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="tomate"]
+sprite_frames = SubResource("SpriteFrames_fnbn8")
+animation = &"tomate"
+frame = 5
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tomate"]
+shape = SubResource("RectangleShape2D_lg2qq")
+
+[node name="VitoriaRegia" type="AnimatedSprite2D" parent="."]
+position = Vector2(456, 184)
+sprite_frames = SubResource("SpriteFrames_frlku")
+animation = &"agua"
+autoplay = "agua"
+frame_progress = 0.391138
+
+[node name="VitoriaRegia2" type="AnimatedSprite2D" parent="."]
+position = Vector2(360, 136)
+rotation = 0.234288
+sprite_frames = SubResource("SpriteFrames_frlku")
+animation = &"agua"
+autoplay = "agua"
+frame_progress = 0.197877
+
+[node name="VitoriaRegia3" type="AnimatedSprite2D" parent="."]
+position = Vector2(403, 175)
+rotation = -0.000522044
+sprite_frames = SubResource("SpriteFrames_w76bo")
+animation = &"agua"
+autoplay = "agua"
+frame_progress = 0.298246
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="semente_tomate" type="Label" parent="HUD"]
+offset_left = 5.0
+offset_top = 6.0
+offset_right = 156.0
+offset_bottom = 29.0
+theme_override_colors/font_color = Color(0, 0.513726, 0.909804, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+text = "semente de tomate"
+
+[connection signal="body_entered" from="tomate" to="tomate" method="_on_body_entered"]
+
+[editable path="cenario_grama/fazendeira"]

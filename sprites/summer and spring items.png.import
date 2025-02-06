@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kgv1ti3s2eys"
-path="res://.godot/imported/walk and idle.png-c586d29fcfd34ba9c94bf92ae9728569.ctex"
+uid="uid://cpss0xxlyuwo8"
+path="res://.godot/imported/summer and spring items.png-4b33326c4a62f09a415e6111dbade5b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://walk and idle.png"
-dest_files=["res://.godot/imported/walk and idle.png-c586d29fcfd34ba9c94bf92ae9728569.ctex"]
+source_file="res://sprites/summer and spring items.png"
+dest_files=["res://.godot/imported/summer and spring items.png-4b33326c4a62f09a415e6111dbade5b7.ctex"]
 
 [params]
 
